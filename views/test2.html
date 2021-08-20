@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>append demo</title>
+    <style>
+        p {
+            background: yellow;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+</head>
+
+<body>
+
+    <p>I would like to say: </p>
+    <div id="p"></div>
+    <button type="button" id="add_btn1" class="btn btn-warning" name="button">  lala </button>
+    <button type="button" id="button" class="btn btn-warning" name="button">  lala </button>
+    <script>
+        $(document).ready(function() {
+            $("#add_btn1").click(function() {
+                $("#p").append(`  <tr>
+                                    <td><input type="text" class="form-control" id="nama" name="nama" placeholder="Nama">
+                                    </td>
+                                    <td><input type="text" class="form-control" id="email" name="email" placeholder="Email">
+                                    </td>
+                                    <td> <input type="number" class="form-control" id="nohp" name="nohp" placeholder="Nomor HP">
+                                    </td>
+                                    <td class="td-actions">
+                                        <button type="button" id="add_btn1" class="btn btn-warning" name="button">  lala </button>
+                                    </td>
+                                </tr>`);
+            });
+            $("#button").click(function() {
+                $("#button").remove();
+            });
+        });
+    </script>
+
+</body>
+
+</html>

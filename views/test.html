@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script src="file.js" type="text/javascript"></script>
+
+</head>
+
+<body>
+    <div id="readroot" style="display: none">
+
+        <input type="button" value="Remove review" onclick="this.parentNode.parentNode.removeChild(this.parentNode);" /><br /><br />
+
+        <input name="cd" value="title" />
+
+        <select name="rankingsel">
+            <option>Rating</option>
+            <option value="excellent">Excellent</option>
+            <option value="good">Good</option>
+            <option value="ok">OK</option>
+            <option value="poor">Poor</option>
+            <option value="bad">Bad</option>
+        </select><br /><br />
+
+        <textarea rows="5" cols="20" name="review">Short review</textarea>
+        <br />Radio buttons included to test them in Explorer:<br />
+        <input type="radio" name="something" value="test1" />Test 1<br />
+        <input type="radio" name="something" value="test2" />Test 2
+
+    </div>
+
+    <form method="post" action="/cgi-bin/show_params.cgi">
+
+        <span id="writeroot"></span>
+
+        <input type="button" id="moreFields" value="Give me more fields!" />
+        <input type="submit" value="Send form" />
+
+    </form>
+</body>
+
+
+</html>
